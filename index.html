@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <link href="style.css" rel="stylesheet"  />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="main" id="main" >
+        <div id="inner">            
+        <div>
+            <h6 id="cal">Calculator</h6>
+        </div>
+        <br>
+        <div class="dropdown">
+            <button type="button" class="dropdown-toggle" data-toggle="dropdown">
+              View
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" onclick="stnd()">Standard</a>
+                <a class="dropdown-item" onclick="sctfc()">Scientific</a>
+              </div>
+          </div>
+
+        
+        <input type="text" id="box"/>
+        <hr>
+        <div class="butts">
+            <button id="clear" class="btn btn-warning" onclick="clearEvery()">C</button>
+            <button id="root" class="btn btn-warning" onclick="getroot('√')">√</button>
+        </div>
+    <div class="butts">
+        <button class="btn" id="7" onclick="buttns('7')">7</button>
+        <button class="btn" id="8" onclick="buttns('8')">8</button>
+        <button class="btn" id="9" onclick="buttns('9')">9</button>
+        <button class="btn" id="/" onclick="buttns('/')">/</button>
+        <button class="btn" id="%" onclick="buttns('%')" >%</button>
+        <button class="btn hid btn-dark" id="sn" onclick="sinvalue('sin')" >sin</button>
+        <button class="btn hid btn-dark" id="cs" onclick="cosvalue('cos')">cos</button>
+        <button class="btn hid btn-dark" id="tn" onclick="tanvalue('tan')">tan</button>
+    </div>
+    <div class="butts"style="float: left;">
+        <button class="btn" id="num" onclick="buttns('4')">4</button>
+        <button class="btn" id="num" onclick="buttns('5')">5</button>
+        <button class="btn" id="num" onclick="buttns('6')">6</button>
+        <button class="btn btn-success" id="num" style="width: 105px;" onclick="buttns('*')">*</button>
+        
+    </div>
+    <div >
+        
+        <button class="btn btn-danger hid" id="ln" onclick="ln('ln')" >ln</button>
+        <button class="btn hid btn-dark" id="lg" onclick="lg('log')">log</button>        
+        <button class="btn btn-danger hid" id="pi" onclick="phi('π')">π</button>
+        
+    </div>
+    <div class="butts" style="float: left;">
+        <button class="btn" id="num" onclick="buttns('1')">1</button>
+        <button class="btn" id="num" onclick="buttns('2')">2</button>
+        <button class="btn" id="num" onclick="buttns('3')">3</button>
+        <button class="btn btn-success" id="num" onclick="buttns('-')">-</button>
+        <button class="btn btn-success" id="num" style="height: 50px;" onclick="getresult()">=</button>
+     
+    </div>
+    <din>
+        <button class="btn btn-danger hid" id="fac" onclick="buttns('!')" >n!</button>
+        <button class="btn btn-danger hid" id="sq" onclick="squa('x^2')">x^2</button>
+        <button class="btn btn-danger hid" id="10x" onclick="buttns('10^x')">10^x</button>
+    </din>
+    <div class="butts"style="float: left;">
+        <button class="btn" id="num" style="width: 155px;"onclick="buttns('0')">0</button>
+        <button class="btn btn-success" id="num" onclick="buttns('.')">.</button>
+        <button class="btn btn-success" id="num" onclick="buttns('+')">+</button>     
+    </div>
+    <div>
+        <button class="btn hid" id="sn" onclick="buttns('sin')" style="display: none;">sin</button>
+        <button class="btn hid" id="cs" onclick="buttns('cos')" style="display: none;">cos</button>
+        <button class="btn hid" id="tn" onclick="buttns('tan')" style="display: none;">tan</button>
+    </div>
+    </div>
+    </div>
+    
+</body>
+<script src="app.js"></script>
+</html>
